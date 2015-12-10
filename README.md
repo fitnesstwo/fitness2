@@ -1,3 +1,3 @@
-# fitness2
+The OpenShift `diy` cartridge documentation can be found at:
 
-This is my UOG-FYP project using PLAY framework as webservice
+http://openshift.github.io/documentation/oo_cartridge_guide.html#diy
