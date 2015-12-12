@@ -1,0 +1,30 @@
+New log file opened at Fri Dec 11 16:21:00 SGT 2015 by 572@MarcLau
+Taking next connection to: 53624
+New client attempting to connect on port: 53625-53624
+  Address = /192.168.0.101:53624
+This client on port 53625 has uuid ab1b541e-f1fe-4a64-85b3-4c446103ab33 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-ab1b541e-f1fe-4a64-85b3-4c446103ab33
+Taking next connection to: 53624
+New client attempting to connect on port: 53647-53624
+  Address = /192.168.0.101:53624
+Handshake exception on socket: 53647
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 53624
+New client attempting to connect on port: 53648-53624
+  Address = /192.168.0.101:53624
+This client on port 53648 has uuid 7b00a239-aa8f-4b91-95ce-2d8e61947c01 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-7b00a239-aa8f-4b91-95ce-2d8e61947c01
+Taking next connection to: 53624
+Server socket closed java.net.SocketException: Socket operation on nonsocket: configureBlocking
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 572@MarcLau logs at Fri Dec 11 16:23:15 SGT 2015, goodbye.

@@ -1,7 +1,8 @@
 logs
-project/project
-project/target
-#target #commented for deploying to openshift
-tmp
-.history
-dist
+target
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
