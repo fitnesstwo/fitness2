@@ -4,18 +4,18 @@
 # $OPENSHIFT_INTERNAL_IP:8080 
 
 LOG_FILE="${OPENSHIFT_DIY_LOG_DIR}play.log"
-cd ${OPENSHIFT_HOMEDIR}  
+cd ${OPENSHIFT_REPO_DIR}  
 # figure out the start script (and ensure it is runnable)
 
-if [[ -f "${OPENSHIFT_HOMEDIR}target/start" ]]
+if [[ -f "${OPENSHIFT_REPO_DIR}target/start" ]]
 then
 	# for 2.0.x/2.1.x
-	START_SCRIPT="${OPENSHIFT_HOMEDIR}target/start"
+	START_SCRIPT="${OPENSHIFT_REPO_DIR}target/start"
 else
 	# for 2.2.x or later
 	#START_SCRIPT_BAT=`find ${OPENSHIFT_REPO_DIR}target/universal/stage/bin -name \*.bat`
 	
-	START_SCRIPT="${OPENSHIFT_HOMEDIR}target/universal/stage/bin/playfitness2.bat"
+	START_SCRIPT="${OPENSHIFT_REPO_DIR}target/universal/stage/bin/playfitness2.bat"
 	#START_SCRIPT=${START_SCRIPT_BAT%.bat}
 fi
 
@@ -23,7 +23,7 @@ chmod +x $START_SCRIPT
 
 # start application
 
-APP_COMMAND="$START_SCRIPT $PLAY_PARAMS "\
+APP_COMMAND="${OPENSHIFT_DATA_DIR} $PLAY_PARAMS "\
 "-Dhttp.port=${OPENSHIFT_DIY_PORT} "\
 "-Dhttp.address=${OPENSHIFT_DIY_IP} "\
 "-Dconfig.resource=openshift.conf"
