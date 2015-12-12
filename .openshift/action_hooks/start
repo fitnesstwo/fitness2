@@ -16,7 +16,7 @@ else
 	#START_SCRIPT_BAT=`find ${OPENSHIFT_REPO_DIR}target/universal/stage/bin -name \*.bat`
 	
 	START_SCRIPT_BAT="${OPENSHIFT_REPO_DIR}target/universal/stage/bin/playfitness2"
-	#START_SCRIPT=${START_SCRIPT_BAT%.bat}
+	START_SCRIPT=${START_SCRIPT_BAT%.bat}
 fi
 
 chmod +x $START_SCRIPT
