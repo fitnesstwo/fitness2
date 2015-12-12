@@ -23,7 +23,7 @@ chmod +x $START_SCRIPT
 
 # start application
 
-APP_COMMAND="$START_SCRIPT $PLAY_PARAMS "\start
+APP_COMMAND="$START_SCRIPT $PLAY_PARAMS "\
 "-Dhttp.port=${OPENSHIFT_DIY_PORT} "\
 "-Dhttp.address=${OPENSHIFT_DIY_IP} "\
 "-Dconfig.resource=openshift.conf"
