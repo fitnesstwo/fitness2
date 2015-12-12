@@ -15,7 +15,7 @@ else
 	# for 2.2.x or later
 	#START_SCRIPT_BAT=`find ${OPENSHIFT_REPO_DIR}target/universal/stage/bin -name \*.bat`
 	
-	START_SCRIPT="${OPENSHIFT_REPO_DIR}target/universal/stage/bin/playfitness2"
+	START_SCRIPT="${OPENSHIFT_REPO_DIR}target/universal/stage/bin/playfitness2.bat"
 	#START_SCRIPT=${START_SCRIPT_BAT%.bat}
 fi
 
@@ -23,7 +23,7 @@ chmod +x $START_SCRIPT
 
 # start application
 
-APP_COMMAND="${OPENSHIFT_DATA_DIR} $PLAY_PARAMS "\
+APP_COMMAND="$START_SCRIPT $PLAY_PARAMS "\
 "-Dhttp.port=${OPENSHIFT_DIY_PORT} "\
 "-Dhttp.address=${OPENSHIFT_DIY_IP} "\
 "-Dconfig.resource=openshift.conf"
