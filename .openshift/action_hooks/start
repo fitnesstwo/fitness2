@@ -4,7 +4,10 @@
 # $OPENSHIFT_INTERNAL_IP:8080 
 
 LOG_FILE="${OPENSHIFT_DIY_LOG_DIR}play.log"
+export JAVA_HOME="$OPENSHIFT_DATA_DIR/jdk/jdk1.8.0_05"
+export PATH=$OPENSHIFT_DATA_DIR/jdk1.8.0_05/bin:$PATH
 cd ${OPENSHIFT_REPO_DIR}  
+
 # figure out the start script (and ensure it is runnable)
 
 if [[ -f "${OPENSHIFT_REPO_DIR}target/start" ]]
