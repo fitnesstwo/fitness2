@@ -1,3 +1,2 @@
-The OpenShift `diy` cartridge documentation can be found at:
+My Openshift and play Framework deployment
 
-http://openshift.github.io/documentation/oo_cartridge_guide.html#diy
